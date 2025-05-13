@@ -1,3 +1,4 @@
+#DDA Line Algorithm
 import pygame
 import sys
 
@@ -27,6 +28,7 @@ while True:
 
 
 
+#Breshenhem's line algorithm
 import pygame
 import sys
 
@@ -63,7 +65,7 @@ while True:
             sys.exit()
 
 
-
+#mid point circle drawing algorithm
 import pygame
 import sys
 
@@ -106,6 +108,8 @@ while True:
             sys.exit()
 
 
+
+#flood fill algorithm
 import pygame
 import sys
 
@@ -141,7 +145,7 @@ while True:
             pygame.display.update()
 
 
-
+#boundary fill algorithm
 import pygame
 import sys
 
@@ -174,7 +178,7 @@ while True:
             boundary_fill(x, y, (255, 0, 0), (255, 255, 255), screen)
 
 
-
+#2d translation
 import pygame
 import sys
 
@@ -215,6 +219,8 @@ while True:
     clock.tick(30)
 
 
+
+#2d scaling
 import pygame
 import sys
 
@@ -254,6 +260,8 @@ while True:
     clock.tick(30)
 
 
+
+#2d rotation
 import pygame
 import sys
 import math
@@ -304,6 +312,8 @@ while True:
     clock.tick(30)
 
 
+
+#2d reflection
 import pygame
 import sys
 
@@ -354,6 +364,8 @@ while True:
 
 
 
+
+#2d shearing
 import pygame
 import sys
 
