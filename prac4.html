@@ -1,0 +1,83 @@
+<!-- Implementing event handling and AJAX -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Event Types Example</title>
+    <style>
+        #info {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Common Event Types Example</h1>
+    <button id="clickButton">Click Me</button>
+    <div id="hoverDiv" style="margin-top: 20px; padding: 20px; background-color: lightgray;">
+        Hover over me
+    </div>
+    <input type="text" id="inputField" placeholder="Type something">
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Username">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="info"></div>
+
+
+    <script>
+        // Mouse Events
+        document.getElementById('clickButton').addEventListener('click', function() {
+            document.getElementById('info').textContent = 'Button was clicked!';
+        });
+
+
+        document.getElementById('hoverDiv').addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'lightblue';
+            document.getElementById('info').textContent = 'Mouse is over the div';
+        });
+
+
+        document.getElementById('hoverDiv').addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'lightgray';
+            document.getElementById('info').textContent = 'Mouse left the div';
+        });
+
+
+        // Keyboard Events
+        document.getElementById('inputField').addEventListener('keydown', function(event) {
+            document.getElementById('info').textContent = `Key pressed: ${event.key}`;
+        });
+
+
+        document.getElementById('inputField').addEventListener('keyup', function(event) {
+            document.getElementById('info').textContent = `Key released: ${event.key}`;
+        });
+
+
+        // Form Events
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+            document.getElementById('info').textContent = 'Form was submitted';
+        });
+
+
+        document.getElementById('inputField').addEventListener('change', function() {
+            document.getElementById('info').textContent = 'Input field value changed';
+        });
+
+
+        // Window Events
+        window.addEventListener('load', function() {
+            document.getElementById('info').textContent = 'Page has finished loading';
+        });
+
+
+        window.addEventListener('resize', function() {
+            document.getElementById('info').textContent = 'Window was resized';
+        });
+    </script>
+</body>
+</html>
